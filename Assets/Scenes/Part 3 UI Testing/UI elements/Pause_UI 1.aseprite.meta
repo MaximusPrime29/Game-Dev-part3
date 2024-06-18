@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f3032c929a0e83946857d7ea4c0736b7
+guid: 0c27c8133df8c2b4b8ee00dab8f26bb2
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,8 +72,8 @@ ScriptedImporter:
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
     fileImportMode: 1
-    importHiddenLayers: 1
-    layerImportMode: 0
+    importHiddenLayers: 0
+    layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -85,8 +85,8 @@ ScriptedImporter:
     addShadowCasters: 0
   asepriteImporterSettings:
     fileImportMode: 1
-    importHiddenLayers: 1
-    layerImportMode: 0
+    importHiddenLayers: 0
+    layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638543347904534556
+  platformSettingsDirtyTick: 638543381470696901
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Layer 1
+  - name: Pause_UI 1
     originalName: 
-    pivot: {x: 0.5, y: -0.5}
+    pivot: {x: 0.5, y: -3.48}
     alignment: 9
-    border: {x: 16, y: 16, z: 16, w: 16}
+    border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 128
-      height: 64
-    spriteID: a68eab3191ef9b94e9dac138418d0e5a
+      width: 66
+      height: 25
+    spriteID: bf12df17f6adedb448b226eba5aeb1a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,62 +141,24 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Layer 2
-    originalName: 
-    pivot: {x: 0.8913044, y: -3.25}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 140
-      y: 4
-      width: 46
-      height: 20
-    spriteID: ea28b27ca6e254048b9e3e1d79c7ee28
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 140, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1317222744
-    name: Layer 1
-    layerFlags: 3
+    guid: 1336547104
+    name: Pause_UI 1
+    layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Layer 1
+    - name: Pause_UI 1
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 32
-        width: 128
-        height: 64
-      spriteId: a68eab3191ef9b94e9dac138418d0e5a
-    linkedCells: []
-    parentIndex: -1
-  - layerIndex: 1
-    guid: 1317221552
-    name: Layer 2
-    layerFlags: 3
-    layerType: 0
-    blendMode: 0
-    cells:
-    - name: Layer 2
-      frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 23
-        y: 65
-        width: 46
-        height: 20
-      spriteId: ea28b27ca6e254048b9e3e1d79c7ee28
+        x: 31
+        y: 87
+        width: 66
+        height: 25
+      spriteId: bf12df17f6adedb448b226eba5aeb1a9
     linkedCells: []
     parentIndex: -1
   platformSettings:

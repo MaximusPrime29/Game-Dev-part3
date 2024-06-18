@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -79,7 +79,7 @@ ScriptedImporter:
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
-    generateModelPrefab: 1
+    generateModelPrefab: 0
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
@@ -92,12 +92,12 @@ ScriptedImporter:
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
-    generateModelPrefab: 1
+    generateModelPrefab: 0
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638543341701177224
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -125,13 +125,13 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 16, y: 0, z: 16, w: 16}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
       width: 32
-      height: 14
+      height: 16
     spriteID: bbd4228be038eaa43b9f4b62efaf09c0
     spriteBone: []
     spriteOutline: []
@@ -157,11 +157,47 @@ ScriptedImporter:
         x: 0
         y: 0
         width: 32
-        height: 14
+        height: 16
       spriteId: bbd4228be038eaa43b9f4b62efaf09c0
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
