@@ -121,7 +121,7 @@ public class UIManager : MonoBehaviour
         //we have to re assign the object as unity is unable to keep the reference from the method that finds the levels beaten text
         GameObject levelsBeatenObject = GameObject.FindGameObjectWithTag("Level1LevelsBeaten");
         levelsBeatenText = levelsBeatenObject.GetComponent<TextMeshProUGUI>();
-        levelsBeatenText.text = "Levels Beaten :" + GameManager.Instance.GetLevelsBeaten().ToString();
+        levelsBeatenText.text = "" + GameManager.Instance.GetLevelsBeaten().ToString();
     }
    
     //unsure what the method is used for 
@@ -147,7 +147,7 @@ public class UIManager : MonoBehaviour
         if (scoreText.text != null)
         {
            
-            scoreText.text = "Score: " + GameManager.Instance.GetObstaclesPassedScore().ToString();
+            scoreText.text = "" + GameManager.Instance.GetObstaclesPassedScore().ToString();
             
             //Debug.Log("Score text updated: " + scoreText.text); // Log the updated text value
         }
