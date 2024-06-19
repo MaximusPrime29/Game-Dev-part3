@@ -4,15 +4,54 @@ using UnityEngine;
 
 public class Boss2 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject pooPilePrefab; // Assign the poo pile prefab in the inspector
+    public float spawnInterval = 2f; // Interval between drops
+
+    // Hardcoded spawn points
+    private Vector3[] spawnPoints = new Vector3[]
+    {
+        new Vector3(-3f, 11f, 8f),
+        new Vector3(0f, 11f, 8f),
+        new Vector3(3f, 11f, 8f)
+    };
+
+    private bool spawningActive = false;
+
     void Start()
     {
-        
+        StartSpawning();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartSpawning()
     {
-        
+        if (!spawningActive)
+        {
+            spawningActive = true;
+            StartCoroutine(SpawnPooPiles());
+        }
+    }
+
+    public void StopSpawning()
+    {
+        spawningActive = false;
+    }
+
+    private IEnumerator SpawnPooPiles()
+    {
+        while (spawningActive)
+        {
+            SpawnPooPile();
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+
+    private void SpawnPooPile()
+    {
+        // Randomly select a spawn point
+        int spawnIndex = Random.Range(0, spawnPoints.Length);
+        Vector3 spawnPosition = spawnPoints[spawnIndex];
+
+        // Instantiate the poo pile at the selected spawn point
+        Instantiate(pooPilePrefab, spawnPosition, Quaternion.identity);
     }
 }

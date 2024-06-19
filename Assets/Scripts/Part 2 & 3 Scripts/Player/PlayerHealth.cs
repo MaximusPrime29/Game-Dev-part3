@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public GameObject player;
-    public GameManager gm;
+    //public GameManager gm;
     
 
    
@@ -18,9 +18,10 @@ public class PlayerHealth : MonoBehaviour
     {
         
         currentHealth = maxHealth;
-        
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
-        gm.PlayerSpawn();
+
+        //gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
+        //gm.PlayerSpawn();
+        //GameManager.Instance.PlayerSpawn();
         
 
     }
@@ -28,8 +29,9 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.PlayerSpawn();
 
-        
+
     }
 
     // Update is called once per frame
@@ -51,7 +53,8 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 0;
             //calls the die method
             AudioManager.Instance.PlayDeathSound();
-            gm.PlayerDeath();
+            
+            GameManager.Instance.PlayerDeath();
             Die();
            
 

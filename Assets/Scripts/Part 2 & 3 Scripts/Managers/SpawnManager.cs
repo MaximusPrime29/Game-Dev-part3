@@ -121,8 +121,8 @@ public class SpawnManager : MonoBehaviour
         if (currentLevelName == "Level1")
         {
            Debug.Log("abou to enter boss spawn method");
-           SpawnBoss1();
-
+            //SpawnBoss1();
+            SpawnBoss2();
         }
         if (currentLevelName == "Level2")
         {
@@ -140,9 +140,9 @@ public class SpawnManager : MonoBehaviour
     
     public Vector3[] hardcodedSpawnPoints = new Vector3[3]
     {
-         new Vector3(-3f, 0.54f, 29.2f),
-         new Vector3(0f, 0.54f, 29.2f),
-         new Vector3(3f, 0.54f, 29.2f)
+         new Vector3(-3f, 0.54f, 29f),
+         new Vector3(0f, 0.54f, 29f),
+         new Vector3(3f, 0.54f, 29f)
     };
 
     private void SpawnBoss1()
@@ -159,8 +159,8 @@ public class SpawnManager : MonoBehaviour
     }
     private void SpawnBoss2()
     {
-        Vector3 spawningSpot = hardcodedSpawnPoints[Random.Range(0, hardcodedSpawnPoints.Length)];
-
+        Vector3 spawningSpot = new Vector3(0f, 2f, 29.2f);
+        
 
         Quaternion boss = Quaternion.Euler(0, 90, 0);
         Instantiate(Boss2, spawningSpot, boss);
