@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnBossBeaten;
     
 
-    private int scoreToSpawnBoss1 = 5;
-    private int scoreToSpawnBoss2 = 10;
+    private int scoreToSpawnBoss1 = 20;
+    private int scoreToSpawnBoss2 = 30;
     private bool boss1Spawned = false;
     private bool boss2Spawned = false;
     private bool boss1Defeated = false;
@@ -114,8 +114,8 @@ public class GameManager : MonoBehaviour
         boss2Spawned = false;
         boss1Defeated = false;
         boss2Defeated = false;
-        scoreToSpawnBoss1 = obstaclesPassedScore + 5;
-        scoreToSpawnBoss2 = obstaclesPassedScore + 10;
+        scoreToSpawnBoss1 = obstaclesPassedScore + 20;
+        scoreToSpawnBoss2 = obstaclesPassedScore + 30;
 
     }
     //used to get what the score is from the gamemanager
