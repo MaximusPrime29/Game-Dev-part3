@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 22cd72dcbb32e1d409258698582d8141, type: 2}
+  - {fileID: 2100000, guid: 4dad8e3888a0a6f4ab504fd8c89e3d45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 7585633368655606075}
   - component: {fileID: 2350322262567996634}
   m_Layer: 0
-  m_Name: Floor2 1
+  m_Name: Floor2+Pick2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4029759b9669a2d4eb6c26f6306d0128, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -361,7 +361,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 22cd72dcbb32e1d409258698582d8141, type: 2}
+  - {fileID: 2100000, guid: 4dad8e3888a0a6f4ab504fd8c89e3d45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -414,7 +414,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6f8b235916cf820459af5d85f7e7aa5b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.22222227
+      value: 0.13575335
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6f8b235916cf820459af5d85f7e7aa5b, type: 3}
       propertyPath: m_LocalScale.y
@@ -426,7 +426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6f8b235916cf820459af5d85f7e7aa5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.21444437
+      value: -0.305
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6f8b235916cf820459af5d85f7e7aa5b, type: 3}
       propertyPath: m_LocalPosition.y

@@ -71,13 +71,5 @@ public class PlayerControl2 : MonoBehaviour
         objRb.AddForce(Gravity * gravityScaleMultiplier * Vector3.up, ForceMode.Acceleration);
     }
 
-    public void IncreaseJump()
-    {
-        jumpForce *= 1.5f;
-    }
-
-    public void ResetJump()
-    {
-        jumpForce = originalJumpForce;
-    }
+    
 }

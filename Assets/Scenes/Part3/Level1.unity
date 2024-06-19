@@ -1124,12 +1124,20 @@ MonoBehaviour:
   - {fileID: 5355059060697659357, guid: d2d72aa4f42a1e347a48f1dc03a85c44, type: 3}
   - {fileID: 561636754768986979, guid: 94c067ab210db1240993ce01be178804, type: 3}
   - {fileID: 6677669543637455367, guid: f7a0e151a7bd6a14eac339758c9e6ce6, type: 3}
+  - {fileID: 6093692152936551374, guid: 3913279e6971f7748bd87cdcb8b7f7a6, type: 3}
+  - {fileID: 5355059060697659357, guid: 1b720fa61bf02aa49ba87a8c5da2d43c, type: 3}
+  - {fileID: 561636754768986979, guid: 59d3c04aa914cbe429020b88dafad303, type: 3}
+  - {fileID: 6093692152936551374, guid: 404bd479c76b4f84691964e6f9661646, type: 3}
+  - {fileID: 5355059060697659357, guid: d2d72aa4f42a1e347a48f1dc03a85c44, type: 3}
+  - {fileID: 561636754768986979, guid: 94c067ab210db1240993ce01be178804, type: 3}
+  - {fileID: 6677669543637455367, guid: f7a0e151a7bd6a14eac339758c9e6ce6, type: 3}
   platformprefabs2:
   - {fileID: 1864163717429249881, guid: 139c079799063b14c942f0854398cbce, type: 3}
   - {fileID: 7483036932828938436, guid: f5934b1ed7357d44fa78eb6c3e72b1a6, type: 3}
   - {fileID: 3502807134943027581, guid: d1d499cc369f39c4894976e52e56df62, type: 3}
-  bossPlatformPrefab1: {fileID: 8885998305990145870, guid: ff7f6b63860c2ec49b22b1ace86a3ad2, type: 3}
-  bossPlatformPrefab2: {fileID: 8885998305990145870, guid: ff7f6b63860c2ec49b22b1ace86a3ad2, type: 3}
+  - {fileID: 3502807134943027581, guid: d1d499cc369f39c4894976e52e56df62, type: 3}
+  bossPlatformPrefab1: {fileID: 6409528883128749312, guid: d03abbb71fa8e5241824b21b21fe47e2, type: 3}
+  bossPlatformPrefab2: {fileID: 1864163717429249881, guid: bcf89ac45564edd428c9537f18dcf5a3, type: 3}
   endPlatformPrefab1: {fileID: 8827672137810970001, guid: 3bd32028d11c5d348a623a5764059d29, type: 3}
   endPlatformPrefab2: {fileID: 8827672137810970001, guid: 3bd32028d11c5d348a623a5764059d29, type: 3}
   bossSpawnDelay: 10
@@ -2839,8 +2847,6 @@ MonoBehaviour:
   OnBossBeaten:
     m_PersistentCalls:
       m_Calls: []
-  scoreToSpawnBoss1: 5
-  scoreToSpawnBoss2: 20
   playerLive: 1
   bossDeath: 0
   bossSpawn: 0

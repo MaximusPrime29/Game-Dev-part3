@@ -32,7 +32,7 @@ public class LevelManager : MonoBehaviour
     {
         // Initialize UI elements if needed
     }
-    //unsure if this is needed
+   
     
     //restarts the level
     public void RestartLevel()
@@ -62,8 +62,8 @@ public class LevelManager : MonoBehaviour
         currentLevelName = Level1Name;
         SceneManager.LoadScene(Level1Name);
         GameManager.Instance.ResetObstaclesAndlevel();
-        //SpawnManager.Instance.NextlevelEnemiesSpawn();
-        PickUpManager.Instance.PickupsStop();
+        
+        
 
     }
 

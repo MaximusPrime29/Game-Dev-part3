@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 7405819447157309877}
   - component: {fileID: 5419019715314285550}
   m_Layer: 0
-  m_Name: Floor1 1
+  m_Name: Floor1+Pick1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

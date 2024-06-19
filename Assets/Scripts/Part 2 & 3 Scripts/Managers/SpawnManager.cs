@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,15 @@ public class SpawnManager : MonoBehaviour
     public GameObject Boss1;
     public GameObject Boss2;
 
+    //the platforms for level 1 and 2
     public GameObject[] platformprefabs1;
     public GameObject[] platformprefabs2;
 
+    //the platforms that spawn when the boss is active
     public GameObject bossPlatformPrefab1;
     public GameObject bossPlatformPrefab2;
 
+    //the platfrom at the end of each level
     public GameObject endPlatformPrefab1;
     public GameObject endPlatformPrefab2;
     
@@ -32,7 +36,7 @@ public class SpawnManager : MonoBehaviour
     
 
 
-    private string currentLevelName = "Level1";
+    
 
     // Start is called before the first frame update
     void Start()
@@ -41,15 +45,14 @@ public class SpawnManager : MonoBehaviour
         GameManager.Instance.OnBoss2Spawned.AddListener(StartBossSpawnDelay);
         GameManager.Instance.OnBoss1Spawned.AddListener(StartBossSpawnDelay);
         
-        //Coroutine EnGene =StartCoroutine(SpawnEnemiesRoutine());
-
-        //LevelManager.Instance.OnNextLevelLoad.AddListener(NextlevelEnemiesSpawn);
+        
 
 
 
         
 
     }
+    //spawns the boss platform
     public void SpawnBossPlatform()
     { 
         if (LevelManager.Instance.currentLevelName=="Level1")
@@ -65,16 +68,18 @@ public class SpawnManager : MonoBehaviour
 
 
     }
+    //spawns the end platform
     public void SpawnEndPlatform()
     {
+         
         if (LevelManager.Instance.currentLevelName == "Level1")
         {
-            Instantiate(endPlatformPrefab1, new Vector3(0, 0, 39), Quaternion.identity);
+            Instantiate(endPlatformPrefab1, new Vector3(0, 0, 39.2f), Quaternion.identity);
 
         }
         if (LevelManager.Instance.currentLevelName == "Level2")
         {
-            Instantiate(endPlatformPrefab2, new Vector3(0, 0, 39), Quaternion.identity);
+            Instantiate(endPlatformPrefab2, new Vector3(0, 0, 39.2f), Quaternion.identity);
 
         }
 
@@ -101,7 +106,7 @@ public class SpawnManager : MonoBehaviour
     }
    
     
-
+    //a delay when spawning the boss so that there is time for the player to move past the obstacles
     private void StartBossSpawnDelay()
     {
         Debug.Log("in start spawndelay metrhod");
@@ -118,13 +123,13 @@ public class SpawnManager : MonoBehaviour
         yield return new WaitForSeconds(bossSpawnDelay);
         
         
-        if (currentLevelName == "Level1")
+        if (LevelManager.Instance.currentLevelName == "Level1")
         {
            Debug.Log("abou to enter boss spawn method");
-            //SpawnBoss1();
-            SpawnBoss2();
+            SpawnBoss1();
+            //SpawnBoss2();
         }
-        if (currentLevelName == "Level2")
+        if (LevelManager.Instance.currentLevelName == "Level2")
         {
              SpawnBoss2();
         }
@@ -145,6 +150,7 @@ public class SpawnManager : MonoBehaviour
          new Vector3(3f, 0.54f, 29f)
     };
 
+    //spawns the first boss
     private void SpawnBoss1()
     {
         Vector3 spawningSpot = hardcodedSpawnPoints[Random.Range(0, hardcodedSpawnPoints.Length)];
@@ -157,6 +163,7 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(EndBossAfterDelay());
 
     }
+    //spawns the second boss
     private void SpawnBoss2()
     {
         Vector3 spawningSpot = new Vector3(0f, 2f, 29.2f);
@@ -173,6 +180,7 @@ public class SpawnManager : MonoBehaviour
         yield return new WaitForSeconds(bossSpawnDelay);
         DestroyBoss();
     }
+    //destroys the boss after a given time
     private void DestroyBoss()
     {
         Debug.Log("In boss destroy method");
@@ -201,10 +209,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (LevelManager.Instance.currentLevelName=="GameOver")
-        {
-            //GameOverStopSpawning();
-        }
+        
         
         
         

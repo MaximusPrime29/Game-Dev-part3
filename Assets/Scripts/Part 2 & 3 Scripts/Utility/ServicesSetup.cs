@@ -60,7 +60,7 @@ public class ServicesSetup : MonoBehaviour
     {
         string playerId = AuthenticationService.Instance.PlayerId;
         PlayerID.Instance.SetPlayerId(playerId);
-        print("Signed In Successfully.");
+        //print("Signed In Successfully.");
         print(AuthenticationService.Instance.PlayerId);
         print(AuthenticationService.Instance.AccessToken);
 
@@ -72,14 +72,11 @@ public class ServicesSetup : MonoBehaviour
 
     private void OnSignInFailed(RequestFailedException exception)
     {
-        print("Signed In Failed.");
+        //print("Signed In Failed.");
         print(exception.Message);
     }
 
-    private void OnSignOut()
-    {
-        print("Signed Out Successfully");
-    }
+    
 
     #endregion
 

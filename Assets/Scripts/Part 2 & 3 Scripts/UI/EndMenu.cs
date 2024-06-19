@@ -7,15 +7,6 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
 
-    
-    
-
-    private void Start()
-    {
-       
-        
-    }
-
     void Update()
     {
         

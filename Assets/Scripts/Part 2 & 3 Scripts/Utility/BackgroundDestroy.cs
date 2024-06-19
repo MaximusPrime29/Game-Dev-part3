@@ -6,7 +6,7 @@ public class BackgroundDestroy : MonoBehaviour
 {
     //if an object is behind the player by a certain distance they are destroyed
     
-    // Start is called before the first frame update
+    
     void Start()
     {
         

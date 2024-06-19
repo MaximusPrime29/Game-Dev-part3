@@ -60,7 +60,8 @@ public class SectionTrigger : MonoBehaviour
     {
         GameManager.Instance.OnBossBeaten.AddListener(LoadEndPlatform);
         GameManager.Instance.OnBoss1Spawned.AddListener(LoadBossPlatForm);
-             //GameManager.Instance.OnPickup1Activated.AddListener(OnPickup1Activated);
+        GameManager.Instance.OnBoss2Spawned.AddListener(LoadBossPlatForm);
+             
 
     }
 

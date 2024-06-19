@@ -5,7 +5,10 @@ using UnityEngine;
 public class Boss2 : MonoBehaviour
 {
     public GameObject pooPilePrefab; // Assign the poo pile prefab in the inspector
-    public float spawnInterval = 2f; // Interval between drops
+    public float spawnInterval = 1f; // Interval between drops
+
+  
+    
 
     // Hardcoded spawn points
     private Vector3[] spawnPoints = new Vector3[]
@@ -24,17 +27,12 @@ public class Boss2 : MonoBehaviour
 
     public void StartSpawning()
     {
-        if (!spawningActive)
-        {
             spawningActive = true;
             StartCoroutine(SpawnPooPiles());
-        }
+     
     }
 
-    public void StopSpawning()
-    {
-        spawningActive = false;
-    }
+    
 
     private IEnumerator SpawnPooPiles()
     {

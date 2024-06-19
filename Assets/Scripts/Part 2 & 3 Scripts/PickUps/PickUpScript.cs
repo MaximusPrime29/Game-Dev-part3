@@ -14,8 +14,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             AudioManager.Instance.PlayJumpBoostSound();
             GameManager.Instance.ActivatePickup1();
-            //pickUpFX.Play();
-            //PickUpManager.Instance.JumpBoost(other.GetComponent<PlayerControl2>());
+            
             Destroy(this.gameObject);
         }
         if (other.gameObject.CompareTag("Enemy"))

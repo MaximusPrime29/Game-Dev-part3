@@ -17,7 +17,7 @@ public class Destroyy : MonoBehaviour
         
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("player has died");
+            
             Destroy(other.gameObject);
 
         }

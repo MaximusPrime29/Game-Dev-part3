@@ -68,7 +68,7 @@ public class UIManager : MonoBehaviour
         GameObject pausePanel = GameObject.FindGameObjectWithTag("Level1PausePanel");
         pausePanelCanvasGroup = pausePanel.GetComponent<CanvasGroup>();
 
-        //TogglePauseMenu();
+        
 
 
     }
@@ -89,22 +89,9 @@ public class UIManager : MonoBehaviour
         {
             // gets the text element of the object
             scoreText = scoreObject.GetComponent<TextMeshProUGUI>();
-            if (scoreText != null)
-            {
-                //debug
-                Debug.Log("Score text found: " + scoreText.gameObject.name);
-            }
-            else
-            {
-                //debug
-                Debug.LogWarning("Score text component not found on GameObject with tag: ScoreText");
-            }
+            
         }
-        else
-        {
-            //debug
-            Debug.LogWarning("Score text GameObject not found with tag: ScoreText");
-        }
+        
 
     }
     //a method for finding the levels beaten text 
@@ -151,11 +138,7 @@ public class UIManager : MonoBehaviour
             
             //Debug.Log("Score text updated: " + scoreText.text); // Log the updated text value
         }
-        else
-        {
-            Debug.LogWarning("Score text is null");
-            
-        }
+        
 
     }
     //used for toggling the pause menu on and off 
@@ -192,12 +175,9 @@ public class UIManager : MonoBehaviour
             //you can interact with it
             pausePanelCanvasGroup.interactable = true;
             pausePanelCanvasGroup.blocksRaycasts = true;
-            Debug.Log("Pause menu shown.");
+           
         }
-        else
-        {
-            Debug.LogWarning("Pause panel CanvasGroup is null, cannot show pause menu.");
-        }
+       
     }
 
     public void HidePauseMenu()
@@ -211,14 +191,11 @@ public class UIManager : MonoBehaviour
             pausePanelCanvasGroup.blocksRaycasts = false;
             Debug.Log("Pause menu hidden.");
         }
-        else
-        {
-            Debug.LogWarning("Pause panel CanvasGroup is null, cannot hide pause menu.");
-        }
+       
     }
     public void Restart()
     {
-        Debug.Log("trying to rerstart");
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         
 

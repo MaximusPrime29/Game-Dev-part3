@@ -33,7 +33,7 @@ public class InputManager : MonoBehaviour
             {
                 Time.timeScale = 1f;
                 UIManager.Instance.TogglePausePanel();
-                //tells the gamemanager to resume the game
+                //tells the ui manager to resume the game
                
 
             }
@@ -41,14 +41,14 @@ public class InputManager : MonoBehaviour
             {
                 Time.timeScale = 0f;
                 UIManager.Instance.TogglePausePanel();
-                //tells the gamemanager to pause the game
+                //tells the ui manager to pause the game
                 
 
             }
             
         }
 
-        // Add more input handling as needed
+        
         
     }
 

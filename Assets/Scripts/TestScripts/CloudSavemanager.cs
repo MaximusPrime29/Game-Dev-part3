@@ -31,9 +31,8 @@ public class CloudSavemanager : MonoBehaviour
 
         };
         Dictionary<string, string> result = await CloudSaveService.Instance.Data.Player.SaveAsync(data);
-        Debug.Log("Data saved to cloud.");
-        Debug.Log(score);
-        Debug.Log(playerID);
+        
+        
        
     }
 

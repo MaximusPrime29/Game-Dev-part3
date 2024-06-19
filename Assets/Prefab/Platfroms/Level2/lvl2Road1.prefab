@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7088087034429828207}
   - component: {fileID: 4165088228883463151}
   m_Layer: 0
-  m_Name: lvl2Room1 (1)
+  m_Name: lvl2Road1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,15 +544,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d8598dcb9ba75942a5326beeba84db5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.020000035
+      value: -0.263
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d8598dcb9ba75942a5326beeba84db5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1700001
+      value: 1.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d8598dcb9ba75942a5326beeba84db5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1135603
+      value: 0.188
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d8598dcb9ba75942a5326beeba84db5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1006,7 +1006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 48e45d4724079aa4c83fe525e4fc7fb8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3497607
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 48e45d4724079aa4c83fe525e4fc7fb8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1014,7 +1014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 48e45d4724079aa4c83fe525e4fc7fb8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.40043965
+      value: -0.179
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 48e45d4724079aa4c83fe525e4fc7fb8, type: 3}
       propertyPath: m_LocalRotation.w

@@ -80,18 +80,12 @@ public class AudioManager : MonoBehaviour
     {
         immunitySound.Play();
     }
-    public void PlayBossSound()
-    {
-        bossSound.Play();
-    }
+   
     public void PlayDeathSound()
     {
         deathSound.Play();
     }
-    public void PlayFootStepsSound()
-    {
-        footStepsSound.Play();
-    }
+   
    
 
 

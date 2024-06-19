@@ -19,9 +19,7 @@ public class PlayerHealth : MonoBehaviour
         
         currentHealth = maxHealth;
 
-        //gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
-        //gm.PlayerSpawn();
-        //GameManager.Instance.PlayerSpawn();
+        
         
 
     }
@@ -44,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
     public void Takedamage(int dam)
     {
         currentHealth -= dam;
-        //Debug.Log($"{currentHealth}");
+       
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);  // Ensure health stays within bounds
 
         if (currentHealth <=0) 
@@ -70,32 +68,16 @@ public class PlayerHealth : MonoBehaviour
     //tells the levelmanager to do the playerdied method which loads the game over scene
     private void Die()
     {
-        if (LevelManager.Instance == null)
-        {
-            Debug.LogError("LevelManager.Instance is null");
-            return;
-        }
+       
         LevelManager.Instance.PlayerDied();
 
-        if (GameManager.Instance == null)
-        {
-            Debug.LogError("GameManager.Instance is null");
-            return;
-        }
+       
         int score = GameManager.Instance.GetObstaclesPassedScore();
 
-        if (PlayerID.Instance == null)
-        {
-            Debug.LogError("PlayerID.Instance is null");
-            return;
-        }
+        
         string playerID = PlayerID.Instance.PlayerId;
 
-        if (CloudSavemanager.Instance == null)
-        {
-            Debug.LogError("CloudSavemanager is null");
-            return;
-        }
+        
         CloudSavemanager.SaveData(score, playerID);
     }
 

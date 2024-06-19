@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnBossBeaten;
     
 
-    public int scoreToSpawnBoss1 = 20;
-    public int scoreToSpawnBoss2 = 20;
+    private int scoreToSpawnBoss1 = 5;
+    private int scoreToSpawnBoss2 = 10;
     private bool boss1Spawned = false;
     private bool boss2Spawned = false;
     private bool boss1Defeated = false;
@@ -63,16 +63,17 @@ public class GameManager : MonoBehaviour
     public void IncrementObstaclesPassedScore()
     {
         obstaclesPassedScore++;
-        //Debug.Log("Obstacles Passed: " + obstaclesPassedScore);
+        
 
         //calls the onobstacle passed event and invokes all registered callbacks, such as the Uimanager listening to this event and then updating the score
         OnObstaclePassed.Invoke();
     }
+    //resets the values for when the player restarts
     public void ResetObstaclesAndlevel()
     {
         obstaclesPassedScore = 0;
         levelsBeaten = 0;
-        //Debug.Log(GetObstaclesPassedScore());
+        
         
     }
 
@@ -114,7 +115,7 @@ public class GameManager : MonoBehaviour
         boss1Defeated = false;
         boss2Defeated = false;
         scoreToSpawnBoss1 = obstaclesPassedScore + 5;
-        scoreToSpawnBoss2 = obstaclesPassedScore + 20;
+        scoreToSpawnBoss2 = obstaclesPassedScore + 10;
 
     }
     //used to get what the score is from the gamemanager
@@ -160,7 +161,7 @@ public class GameManager : MonoBehaviour
     }
     public void DefeatBoss()
     {
-        
+        //when the boss is defeated we call this method
         if (LevelManager.Instance.currentLevelName =="Level1")
         {
             boss1Spawned = false;
@@ -182,23 +183,18 @@ public class GameManager : MonoBehaviour
 
 
     //unsure if being used
-    public void RestartGame()
-    {
-        Time.timeScale = 1f;
-        
-        LevelManager.Instance.RestartLevel();
-    }
+    
 
     
     // Update is called once per frame
     void Update()
     {
         //ensure the list accounts for enemies dieing and spawning
-        //enemylist = GameObject.FindGameObjectsWithTag("Enemy");
-
+        
+        //spawns the boss if the right score is reached and the boss has not already spawned or been defeated
         if (obstaclesPassedScore >= scoreToSpawnBoss1 && !boss1Spawned &&!boss1Defeated && LevelManager.Instance.currentLevelName=="Level1")
         {
-            Debug.Log("in gamenager telling boss to spawn");
+            
             Debug.Log("the score is " +obstaclesPassedScore);
             SpawnBoss1();
             boss1Spawned = true;
@@ -206,7 +202,6 @@ public class GameManager : MonoBehaviour
         }
         if (obstaclesPassedScore >= scoreToSpawnBoss2 && !boss2Spawned && !boss2Defeated && LevelManager.Instance.currentLevelName=="Level2")
         {
-            Debug.Log("the score is " + obstaclesPassedScore);
             SpawnBoss2();
             boss2Spawned = true;
 

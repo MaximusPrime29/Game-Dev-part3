@@ -50,69 +50,22 @@ public class PickUpManager : MonoBehaviour
         GameManager.Instance.OnPickup1Activated.AddListener(OnPickup1Activated);
         GameManager.Instance.OnPickup2Activated.AddListener(OnPickup2Activated);
         GameManager.Instance.OnPickup3Activated.AddListener(OnPickup3Activated);
-        LevelManager.Instance.OnNextLevelLoad.AddListener(PickupsSpawn);
+       
 
-        //PickupsSpawn();
+        
     }
-    public void PickupsSpawn()
-    {
-        spawning= true;
-        StopAllCoroutines();
-        StartCoroutine(SpawnPickupRoutine());
-
-    }
-    public void PickupsStop()
-    {
-        spawning = false;
-        StopCoroutine(SpawnPickupRoutine());
-
-    }
+   
     private void Update()
     {
-        if (LevelManager.Instance.currentLevelName=="GameOver")
-        {
-            PickupsStop();
-        }
+        
         
        
         
         
     }
     //used to set a delay between spawning pickups
-    private IEnumerator SpawnPickupRoutine()
-    {
-        while(spawning ==true)
-        {
-            Vector3 spawningSpot = hardcodedSpawnPoints[Random.Range(0, hardcodedSpawnPoints.Length)];
-
-            pickupID=Random.Range(0, 3);
-            InstantiatePickup(pickupID, spawningSpot);
-            
-            //a ten sceond delay
-            yield return new WaitForSeconds(10f);
-        }
-    }
-    private void InstantiatePickup(float pickupID, Vector3 position)
-    {
-        if (pickupID==0)
-        {
-            Instantiate(pickupPrefab1, position, Quaternion.identity);
-
-        }
-        if (pickupID == 1)
-        {
-            Instantiate(pickupPrefab2, position, Quaternion.identity);
-
-        }
-        if(pickupID == 2)
-        {
-            Instantiate(pickupPrefab3, position, Quaternion.identity);
-            //Debug.Log(position.ToString());
-
-        }
-        Debug.Log(position.ToString());
-
-    }
+    
+    
     
     public Vector3[] hardcodedSpawnPoints = new Vector3[3]
     {

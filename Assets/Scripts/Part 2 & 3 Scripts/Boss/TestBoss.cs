@@ -22,7 +22,7 @@ public class TestBoss : MonoBehaviour
     public GameObject obstacle;
 
     //the bosses position
-    float bossZ;
+    
 
     //counting the obstacles
    
@@ -82,7 +82,7 @@ public class TestBoss : MonoBehaviour
 
     private void ThrowProjectileAtPlayer()
     {
-        Debug.Log("in new obstacle spawn");
+        
         Instantiate(obstacle,throwPoint.position,throwPoint.rotation);
        
 
@@ -93,7 +93,7 @@ public class TestBoss : MonoBehaviour
         playerX = player[0].GetComponent<Transform>().position.x;
         Vector3 bossPosition =transform.position;
         
-        //transform.position += new Vector3(0, 0, -4) * Time.deltaTime;
+       
         bossPosition.x =playerX;
         transform.position =bossPosition;
         
@@ -107,12 +107,12 @@ public class TestBoss : MonoBehaviour
             //fetches the players position
             
             
-            bossZ = GetComponent<Transform>().position.z;
+            
 
             //spawns the obstacle 5 feet in front of the player
             
             
-            //Debug.Log("in old obstacle spawn");
+            
             Instantiate(obstacle,throwPoint.position, Quaternion.identity);
             
             yield return new WaitForSeconds(2);

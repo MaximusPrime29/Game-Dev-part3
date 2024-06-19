@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: -7715245783543107857}
   - component: {fileID: -1909471070099854020}
   m_Layer: 0
-  m_Name: Section 3
+  m_Name: EndPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
