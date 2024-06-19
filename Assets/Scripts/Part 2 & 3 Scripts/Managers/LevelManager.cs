@@ -85,7 +85,7 @@ public class LevelManager : MonoBehaviour
     public void PlayerDied()
     {
         
-        SceneManager.LoadScene("GameOver");
-        currentLevelName = "GameOver";
+        SceneManager.LoadScene("GameOver 1");
+        currentLevelName = "GameOver 1";
     }
 }

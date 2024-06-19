@@ -27,9 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Part3/Gameover 1.unity
     guid: cd263d23486a55146bdc70b12056aeb8
   - enabled: 0
-    path: Assets/Scenes/Part3/GameOver.unity
-    guid: 7df80ebd78f4810459c04a9493d8acb9
-  - enabled: 0
     path: Assets/Scenes/Deployment/Deployment.unity
     guid: c1b189133c39a9d43954d7e484b7f6b9
   m_configObjects: {}

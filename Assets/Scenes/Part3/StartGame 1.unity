@@ -467,7 +467,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 776b30f3678655a4999af66afcfc02dd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.613
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1127,7 +1127,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c94f7bd22138b894ead4d86790bf08d5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.541
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2089,7 +2089,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2fdcf01c7b8a86f489aba897ef485541, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.619
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2319,7 +2319,7 @@ GameObject:
   - component: {fileID: 1876448102}
   - component: {fileID: 1876448101}
   m_Layer: 0
-  m_Name: cat-pleads-107471
+  m_Name: cat-pleads-107471 (death sound)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2337,7 +2337,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0e7045e1040697e478a450a7ff825219, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.514
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2531,7 +2531,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0e7045e1040697e478a450a7ff825219, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.558
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2659,7 +2659,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3dc494f45451ced4cbda49278e15b3d8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.502
   m_Pitch: 1
   Loop: 0
   Mute: 0
