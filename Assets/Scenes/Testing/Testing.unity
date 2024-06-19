@@ -550,8 +550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb677b7f19b1824da273659a078e0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  KillReward: 5
 --- !u!65 &181525400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -715,11 +713,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28b089e00bcba042a04b1a07be0029a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roadSection: {fileID: 0}
   secNum: 0
-  endPlatform: {fileID: 0}
-  bossbeaten: 0
-  endPlatformCount: 0
+  bossPhase: 0
+  endPhase: 0
 --- !u!143 &481857795
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1073,15 +1069,20 @@ MonoBehaviour:
   OnPickup3Activated:
     m_PersistentCalls:
       m_Calls: []
-  OnBossSpawned:
+  OnBoss1Spawned:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBoss2Spawned:
     m_PersistentCalls:
       m_Calls: []
   OnBossBeaten:
     m_PersistentCalls:
       m_Calls: []
+  scoreToSpawnBoss1: 20
+  scoreToSpawnBoss2: 20
   playerLive: 1
   bossDeath: 0
-  score: 0
+  bossSpawn: 0
   enemylist: []
 --- !u!4 &533904406
 Transform:
@@ -1122,9 +1123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d06c33a47f223428a6a161542ef280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickup: {fileID: 961555533010195038, guid: cd8bed13bd93734408dfc71782f85586, type: 3}
-  pickupCount: 0
-  pickupMax: 1
 --- !u!114 &533904411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,11 +1147,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ababc39dc405f2478159b3612f4ca12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupPrefab1: []
-  pickupPrefab2: []
-  pickupPrefab3: []
+  pickupPrefab1: {fileID: 0}
+  pickupPrefab2: {fileID: 0}
+  pickupPrefab3: {fileID: 0}
   spawnPoints: []
+  pickupID: 0
+  spawning: 0
   speedBuffClip: {fileID: 0}
+  hardcodedSpawnPoints:
+  - {x: -3, y: 1, z: 29.2}
+  - {x: 0, y: 1, z: 29.2}
+  - {x: 3, y: 1, z: 29.2}
 --- !u!114 &533904413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1166,20 +1170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa017be1c6d43d44997ca9623cf1982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy1: {fileID: 5834833368646585338, guid: d107beae1ac512149a8fa2aa7c482cf3, type: 3}
-  Enemy2: {fileID: 8661057617049000708, guid: fd99bf2201bacb3469ed08e31299bf62, type: 3}
-  Enemy3: {fileID: 7974264584822747971, guid: 7e09ed329cdac964892d0943c6dcc1fb, type: 3}
-  Enemy4: {fileID: 8589295633850022690, guid: fab964dbd8442c548876692b3e39b47e, type: 3}
-  enemylist: []
-  xLane1: 0
-  xLane2: 0
-  xLane3: 0
-  enemyCount: 0
-  enemyMax: 3
-  stage2Enemymax: 0
-  gm: {fileID: 533904405}
-  Boss: {fileID: 1758701902456473070, guid: ca62c833fea013f409f864105d6e9932, type: 3}
-  fixUpdateCount: 0
 --- !u!114 &533904414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,8 +1182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2de700afb903b43ae4aef205f9b98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuD: {fileID: 619585777}
-  gm: {fileID: 533904405}
 --- !u!1 &619585777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,8 +1511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2de700afb903b43ae4aef205f9b98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuD: {fileID: 619585777}
-  gm: {fileID: 533904405}
 --- !u!1 &942067668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,6 +2398,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &2098065348
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1864163717429249881, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_Name
+      value: lvl2Room1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.124845505
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 41.845474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435129287925694593, guid: 139c079799063b14c942f0854398cbce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 139c079799063b14c942f0854398cbce, type: 3}
 --- !u!1 &2125117105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,3 +2908,4 @@ SceneRoots:
   - {fileID: 2903222007401389185}
   - {fileID: 7112357533265670563}
   - {fileID: 3517302265062004362}
+  - {fileID: 2098065348}
